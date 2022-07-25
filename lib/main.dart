@@ -7,5 +7,6 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences prefs = await SharedPreferences.getInstance();
   var email = prefs.getString('email');
-  runApp(MaterialApp(home: email == null ? const LoginScreen() : const DashboardScreen()));
+  runApp(MaterialApp(
+      home: email == null ? const LoginScreen() : const DashboardScreen()));
 }
